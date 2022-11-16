@@ -50,7 +50,6 @@ export default function NewNote({setVisible}: any) {
                 color="success"
                 onClick={() => {dispatch(addNote(newNote))
                     setNewNote({id: null, title: '', body: '', tags: []})
-                    setVisible(false)
                 }}
             >
                 Создать
@@ -59,7 +58,7 @@ export default function NewNote({setVisible}: any) {
                 onClick={() => {if(newTag) {
                     let noteTags = newNote.tags?.length? [...newNote.tags, newTag.toLowerCase()] : [newTag.toLowerCase()]
                     noteTags = [...new Set(noteTags)]
-                    setNewNote({...newNote, tags: noteTags})
+                    setNewNote({...newNote, tags: [...noteTags]})
                     setNewTag('')
                     }
                 }}
