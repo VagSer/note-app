@@ -36,6 +36,7 @@ export default function NewNote() {
             </Button>
             <Button
                 color="error"
+                onClick={() => setNewNote({id: null, title: '', body: '', tags: []})}
             >
                 Очистить
             </Button>
