@@ -33,7 +33,7 @@ export default function NoteItem({...props}: INote) {
                 {currentNote.tags?.map(tag => 
                 <Button 
                     variant="contained"
-                    sx={{m:'2px', borderRadius: '20px'}}
+                    sx={{m:'10px 2px 0', borderRadius: '20px'}}
                     endIcon={<ClearIcon />}
                     key={tag}
                     onClick={() => setCurrentNote({...currentNote, tags: currentNote.tags?.filter(t => t !== tag)})}
@@ -52,9 +52,10 @@ export default function NoteItem({...props}: INote) {
             <Button 
                 color='success'
                 endIcon={<CheckIcon />}
-                onClick={() => {
+                onClick={() => { if(currentNote.title && currentNote.body){
                     dispatch(editNote(currentNote))
                     setIsEditable(false)
+                    }
                 }}
             >
                 Принять  
@@ -94,7 +95,7 @@ export default function NoteItem({...props}: INote) {
                     {props.tags?.map(tag => 
                     <Button 
                         variant="contained"
-                        sx={{m:'2px', borderRadius: '20px'}}
+                        sx={{m:'10px 2px 0', borderRadius: '20px'}}
                         key={tag}
                     >
                         {tag}
