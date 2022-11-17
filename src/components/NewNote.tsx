@@ -1,4 +1,4 @@
-import { ButtonGroup, Button, Card, TextField } from "@mui/material";
+import { ButtonGroup, Button, TextField } from "@mui/material";
 import { useState } from "react";
 import { useAppDispatch } from "../hook";
 import { addNote } from "../store/noteSlice";

@@ -1,6 +1,3 @@
-import { useState } from "react"
-import NewNote from "./NewNote"
-
 export default function ModalWindow(props: any) {
     
 
@@ -32,6 +29,6 @@ const styles={
     },
     ModalContent: {
         background: 'white',
-        padding: '20px',
+        padding: '50px',
     }
 }

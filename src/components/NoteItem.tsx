@@ -33,7 +33,8 @@ export default function NoteItem({...props}: INote) {
                 {currentNote.tags?.map(tag => 
                 <Button 
                     variant="contained"
-                    sx={{m:'2px'}}
+                    sx={{m:'2px', borderRadius: '20px'}}
+                    endIcon={<ClearIcon />}
                     key={tag}
                     onClick={() => setCurrentNote({...currentNote, tags: currentNote.tags?.filter(t => t !== tag)})}
                 >
@@ -93,7 +94,7 @@ export default function NoteItem({...props}: INote) {
                     {props.tags?.map(tag => 
                     <Button 
                         variant="contained"
-                        sx={{m:'2px'}}
+                        sx={{m:'2px', borderRadius: '20px'}}
                         key={tag}
                     >
                         {tag}
