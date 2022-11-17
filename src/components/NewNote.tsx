@@ -12,7 +12,8 @@ export default function NewNote({setVisible}: any) {
 
     const dispatch=useAppDispatch()
 
-    return (<Card sx={{padding: '20px'}}>
+    return (
+    <form onSubmit = {event => event.preventDefault()}>
         <TextField 
             label="Название заметки"
             value={newNote.title}
@@ -50,6 +51,7 @@ export default function NewNote({setVisible}: any) {
                 color="success"
                 onClick={() => {dispatch(addNote(newNote))
                     setNewNote({id: null, title: '', body: '', tags: []})
+                    setVisible(false)
                 }}
             >
                 Создать
@@ -72,5 +74,5 @@ export default function NewNote({setVisible}: any) {
                 Очистить
             </Button>
         </ButtonGroup>
-    </Card>)
+    </form>)
 }
