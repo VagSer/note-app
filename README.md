@@ -1,6 +1,6 @@
 # note-app
 My Note App. It was built with:
-- Note
+- Vite
 - React
 - Typescript
 - Material UI
