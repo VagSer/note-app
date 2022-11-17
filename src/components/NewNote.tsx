@@ -31,7 +31,7 @@ export default function NewNote({setVisible}: any) {
             {newNote.tags?.map(tag => 
             <Button 
                 variant="contained"
-                sx={{m:'2px'}}
+                sx={{m:'2px', borderRadius: '20px'}}
                 key={tag}
                 onClick={() => setNewNote({...newNote, tags: newNote.tags.filter(t => t !== tag)})}
             >

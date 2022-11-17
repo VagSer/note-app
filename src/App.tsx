@@ -1,6 +1,7 @@
 import { Container } from "@mui/system"
 import NewNote from "./components/NewNote"
 import NoteList from "./components/NoteList"
+import Tag from "./components/Tag"
 import { useAppSelector } from "./hook"
 
 
